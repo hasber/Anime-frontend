@@ -1,0 +1,50 @@
+{
+  "name": "animes",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3005",
+    "build": "yarn codegen && next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write .",
+    "type-check": "tsc --pretty --noEmit",
+    "lint:fix": "eslint . --ext ts --ext tsx --ext js --fix",
+    "check-all": "yarn format && yarn lint:fix && yarn type-check",
+    "codegen": "graphql-codegen -r dotenv/config --config codegen.yml"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.7.0",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mui/icons-material": "^5.10.9",
+    "@mui/material": "^5.10.10",
+    "graphql": "^16.3.0",
+    "graphql-tag": "^2.12.6",
+    "next": "12.3.1",
+    "next-auth": "^4.14.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-toastify": "^9.0.8"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "2.5.0",
+    "@graphql-codegen/import-types-preset": "^2.1.10",
+    "@graphql-codegen/introspection": "2.1.1",
+    "@graphql-codegen/typescript": "2.4.3",
+    "@graphql-codegen/typescript-graphql-files-modules": "2.1.1",
+    "@graphql-codegen/typescript-operations": "2.2.4",
+    "@graphql-codegen/typescript-react-apollo": "3.2.5",
+    "@types/node": "18.11.2",
+    "@types/react": "18.0.21",
+    "@types/react-dom": "18.0.6",
+    "eslint": "8.8.0",
+    "@typescript-eslint/eslint-plugin": "^5.13.0",
+    "@typescript-eslint/parser": "^5.13.0",
+    "eslint-config-next": "12.3.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "2.7.1",
+    "typescript": "4.8.4"
+  }
+}

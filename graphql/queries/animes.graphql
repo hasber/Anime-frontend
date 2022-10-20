@@ -1,0 +1,46 @@
+query GetAnimes($name: String!) {
+  getAnimes(name: $name) {
+    mal_id
+    url
+    images {
+      jpg {
+        image_url
+        small_image_url
+        large_image_url
+      }
+      webp {
+        image_url
+        small_image_url
+        large_image_url
+      }
+    }
+    approved
+    titles {
+      type
+      title
+    }
+    title
+    title_english
+    title_japanese
+    title_synonyms
+    type
+    source
+    episodes
+    status
+    airing
+    duration
+    rating
+    score
+    scored_by
+    rank
+    popularity
+    members
+    favorites
+    synopsis
+    background
+    season
+    year
+    explicit_genres
+    scoreMessage
+  }
+}
